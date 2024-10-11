@@ -124,6 +124,14 @@ class _TabsScreenState extends State<TabsScreen> {
               );
             },
           ),
+          IconButton(
+            icon: const Icon(Icons.star),
+            onPressed: () {
+              setState(() {
+                _selectedPageIndex = 1;
+              });
+            },
+          ),
         ],
       ),
       drawer: MainDrawer(
