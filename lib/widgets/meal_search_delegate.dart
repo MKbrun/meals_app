@@ -10,6 +10,21 @@ class MealSearchDelegate extends SearchDelegate {
     required this.meals,
     required this.onToggleFavorite,
   });
+
+  ///Set text input color to white
+  @override
+  ThemeData appBarTheme(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
+
+    return theme.copyWith(
+      textTheme: theme.textTheme.copyWith(
+        titleLarge: theme.textTheme.titleLarge?.copyWith(
+          color: const Color.fromARGB(247, 255, 255, 255),
+          fontSize: 18.0,
+        ),
+      ),    
+    );
+  }
   
   ///Clear search query
   @override
